@@ -34,6 +34,10 @@
 	function handleMessage(e) {
 		alert(e.detail.text)
 	}
+
+	function handleClick(e) {
+		alert('clicked');
+	}
 </script>
 
 <main>
@@ -71,7 +75,7 @@
 	</div>
 </main>
 
-<Outer on:message='{handleMessage}'></Outer>
+<Outer on:message='{handleMessage}' on:click='{handleClick}'></Outer>
 
 <style>
 	main {

@@ -12,3 +12,6 @@
 <button on:click={sayHello}>
   click to say hello
 </button>
+
+<!-- 转发DOM事件 -->
+<button on:click>click me</button>
