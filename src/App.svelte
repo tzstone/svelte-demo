@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Inner from './Inner.svelte'
+	import Outer from './Outer.svelte'
 	export let name: string;
 	let age = 18
 	// 变量
@@ -71,7 +71,7 @@
 	</div>
 </main>
 
-<Inner on:message='{handleMessage}'></Inner>
+<Outer on:message='{handleMessage}'></Outer>
 
 <style>
 	main {
