@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Outer from './Outer.svelte'
+	import Binding from './Binding.svelte'
 	export let name: string;
 	let age = 18
 	// 变量
@@ -38,6 +39,8 @@
 	function handleClick(e) {
 		alert('clicked');
 	}
+
+	let value = 'world'
 </script>
 
 <main>
@@ -76,6 +79,13 @@
 </main>
 
 <Outer on:message='{handleMessage}' on:click='{handleClick}'></Outer>
+
+<div>
+	<input bind:value={value}>
+	<p>hello {value}</p>
+</div>
+
+<Binding></Binding>
 
 <style>
 	main {
